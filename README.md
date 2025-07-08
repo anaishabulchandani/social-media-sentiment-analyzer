@@ -6,8 +6,8 @@ A Streamlit app that analyzes the sentiment of social media captions using TextB
 -  Upload a CSV file containing a `caption` column
 -  Uses TextBlob to calculate sentiment polarity
 -  Labels each caption as:
-  - Positive 
-  - Negative 
-  - Neutral 
+    Positive 
+    Negative 
+    Neutral 
 -  Displays the results in a table and a bar chart
 -  Allows downloading the analyzed results as a CSV
