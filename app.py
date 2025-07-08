@@ -36,10 +36,12 @@ if input_method == "Upload CSV":
 
 # --- OPTION 2: Manual Input ---
 elif input_method == "Type manually":
-    manual_input = st.text_area("Type or paste your caption(s) below (one per line):", height=150)
-    if manual_input.strip() != "":
-        lines = [line.strip() for line in manual_input.split("\n") if line.strip()]
-        df = pd.DataFrame(lines, columns=["caption"])
+    manual_input = st.text_area("Type or paste your caption(s) below:", height=150)
+analyze_btn = st.button("🔍 Analyze")
+
+if analyze_btn and manual_input.strip() != "":
+    lines = [line.strip() for line in manual_input.split("\n") if line.strip()]
+    df = pd.DataFrame(lines, columns=["caption"])
 
 # --- SENTIMENT FUNCTION ---
 def get_sentiment(text):
