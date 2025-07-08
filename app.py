@@ -15,11 +15,11 @@ st.write("---")
 
 # --- SIDEBAR MODE SELECT ---
 st.sidebar.header("App Mode")
-mode = st.sidebar.radio("What would you like to do?", ["🗣️ Social Media Caption Analysis", "🧠 Mood Detector"])
+mode = st.sidebar.radio("What would you like to do?", ["Social Media Caption Analysis", "Mood Detector"])
 
 st.sidebar.markdown("---")
 st.sidebar.header("About")
-st.sidebar.info("This app analyzes sentiment in text using TextBlob — created with 💜 by Anaisha Bulchandani.")
+st.sidebar.info("This app analyzes sentiment in text using TextBlob — created by Anaisha Bulchandani.")
 
 # --- COMMON SENTIMENT FUNCTION ---
 def get_sentiment(text):
@@ -34,7 +34,7 @@ def get_sentiment(text):
 # =======================
 # MODE 1: SOCIAL ANALYSIS
 # =======================
-if mode == "🗣️ Social Media Caption Analysis":
+if mode == "Social Media Caption Analysis":
     st.markdown("<h1 style='text-align: center; color: #6c63ff;'>📊 Social Media Sentiment Analyzer</h1>", unsafe_allow_html=True)
     st.markdown("<p style='text-align: center; font-size: 18px;'>Upload your social media captions or type them manually to discover their emotional tone!</p>", unsafe_allow_html=True)
 
@@ -79,8 +79,8 @@ if mode == "🗣️ Social Media Caption Analysis":
 # =======================
 # MODE 2: MOOD DETECTOR
 # =======================
-elif mode == "🧠 Mood Detector":
-    st.markdown("<h1 style='text-align: center; color: #6c63ff;'>🧠 Mood Detector</h1>", unsafe_allow_html=True)
+elif mode == "Mood Detector":
+    st.markdown("<h1 style='text-align: center; color: #6c63ff;'>Mood Detector</h1>", unsafe_allow_html=True)
     st.markdown("<p style='text-align: center; font-size: 18px;'>Answer a few questions, and let us sense your mood through sentiment analysis.</p>", unsafe_allow_html=True)
 
     q1 = st.text_input("1. How are you feeling today?")
@@ -101,9 +101,9 @@ elif mode == "🧠 Mood Detector":
             else:
                 mood = "Neutral 😐"
 
-            st.success(f"🧠 Your overall mood seems to be: **{mood}**")
+            st.success(f"Your overall mood seems to be: **{mood}**")
 
-            st.markdown("### 💬 Sentiment per Answer:")
+            st.markdown("### Sentiment per Answer:")
             for i, s in enumerate(sentiments):
                 label = "Positive" if s > 0 else "Negative" if s < 0 else "Neutral"
                 st.write(f"Q{i+1}: {label} ({s:.2f})")
