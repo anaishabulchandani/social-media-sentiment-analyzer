@@ -20,7 +20,7 @@ st.markdown("<p style='text-align: center; font-size: 18px;'>Upload your social 
 
 # --- SIDEBAR ---
 st.sidebar.header("About")
-st.sidebar.info("This app analyzes social media captions using TextBlob sentiment analysis. Built with 💜 by Anaisha Bulchandani.")
+st.sidebar.info("This app analyzes social media captions using TextBlob sentiment analysis. Built by Anaisha Bulchandani.")
 
 # --- INPUT CHOICE ---
 st.header("📤 Upload CSV or Type Captions Manually")
